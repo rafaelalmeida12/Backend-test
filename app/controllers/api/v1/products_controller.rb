@@ -18,7 +18,7 @@ module Api
       def update
         if @product.update(product_params.except(:category_ids))
           to_ar(params[:category_ids]).each {|category_id| insert_into_product(category_id)}
-          render json: {cod: 200, status: "OK", message: {product: @product, categories: @product.categories}}}
+          render json: {cod: 200, status: "OK", message: {product: @product, categories: @product.categories}}
         else
           render status: :bad_request, json: {cod: 400, status: "Bad Request", message: error_message(@product.errors)} unless @error
         end
