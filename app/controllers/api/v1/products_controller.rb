@@ -25,7 +25,7 @@ module Api
       end
 
       def show
-        render json: {cod: 200, status: "OK", message: {product: @product, categories: @product.categories}}} if @product
+        render json: {cod: 200, status: "OK", message: {product: @product, categories: @product.categories}} if @product
       end
 
       def destroy
