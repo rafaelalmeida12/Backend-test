@@ -1,8 +1,12 @@
 module Api
   module V1
     class ProductsController < ApplicationController
-      before_action :find_product, except: :create
+      before_action :find_product, except: [:create, :index]
       include CleanCharacters
+
+      def index
+        render json: {cod: 200, status: "OK", message: Product.all}
+      end
 
       def create
         @product = Product.new(product_params.except(:category_ids))
