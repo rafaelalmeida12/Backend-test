@@ -11,21 +11,21 @@ module Api
       def create
         @product = Product.new(product_params.except(:category_ids))
         to_ar(params[:category_ids]).each {|category_id| insert_into_product(category_id)} if @product.save
-        render status: :created, json: {cod: 201, status: "Created", message: {product: @product}} if @product.save
+        render status: :created, json: {cod: 201, status: "Created", message: {product: @product, categories: @product.categories}} if @product.save
         render status: :bad_request, json: {cod: 400, status: "Bad Request", message: error_message(@product.errors)} unless @error || @product.save
       end
 
       def update
         if @product.update(product_params.except(:category_ids))
           to_ar(params[:category_ids]).each {|category_id| insert_into_product(category_id)}
-          render json: {cod: 200, status: "OK", message: {product: @product}}
+          render json: {cod: 200, status: "OK", message: {product: @product, categories: @product.categories}}}
         else
           render status: :bad_request, json: {cod: 400, status: "Bad Request", message: error_message(@product.errors)} unless @error
         end
       end
 
       def show
-        render json: {cod: 200, status: "OK", message: @product} if @product
+        render json: {cod: 200, status: "OK", message: {product: @product, categories: @product.categories}}} if @product
       end
 
       def destroy
