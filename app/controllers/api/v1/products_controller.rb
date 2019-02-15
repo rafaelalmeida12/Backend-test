@@ -3,7 +3,11 @@ module Api
     class ProductsController < ApplicationController
       before_action :find_product, execpt: :create
 
-      def create; end
+      def create
+        @product = Product.new(product_params)
+        render :ok, json: {cod: 200, status: "success", message: {product: @product}} if @product
+      end
+
       def update; end
       def show; end
       def destroy; end
@@ -14,8 +18,9 @@ module Api
         @product = product.find(params[:id])
       end
 
-      def product_params; end
-
+      def product_params
+        parama(:product).premit(:name, :price)
+      end
     end
   end
 end
