@@ -1,11 +1,13 @@
 module Api
   module V1
     class ProductsController < ApplicationController
-      before_action :find_product, execpt: :create
+      before_action :find_product, except: :create
+      include CleanCharacters
 
       def create
         @product = Product.new(product_params)
-        render :ok, json: {cod: 200, status: "success", message: {product: @product}} if @product
+        render :created, json: {cod: 201, status: "Created", message: {product: @product}} if @product.save
+        render :bad_request, json: {cod: 400, status: "Bad Request", message: error_message(@product.errors)} unless @product.save
       end
 
       def update; end
@@ -15,11 +17,11 @@ module Api
       private
 
       def find_product
-        @product = product.find(params[:id])
+        @product = Product.find(params[:id])
       end
 
       def product_params
-        parama(:product).premit(:name, :price)
+        params.permit(:name, :price)
       end
     end
   end
