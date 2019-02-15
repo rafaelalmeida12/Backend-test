@@ -6,8 +6,8 @@ module Api
 
       def create
         @product = Product.new(product_params)
-        render :created, json: {cod: 201, status: "Created", message: {product: @product}} if @product.save
-        render :bad_request, json: {cod: 400, status: "Bad Request", message: error_message(@product.errors)} unless @product.save
+        render status: :created, json: {cod: 201, status: "Created", message: {product: @product}} if @product.save
+        render status: :bad_request, json: {cod: 400, status: "Bad Request", message: error_message(@product.errors)} unless @product.save
       end
 
       def update; end
