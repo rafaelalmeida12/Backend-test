@@ -10,15 +10,15 @@ module Api
 
       def create
         @product = Product.new(product_params.except(:category_ids))
-        to_ar(params[:category_ids]).each {|category_id| insert_into_product(category_id)} if @product.save
+        to_ar(params[:category_ids]).each {|category_id| insert_into_product(category_id)} if @product.save && params[:category_ids]
         render status: :created, json: {cod: 201, status: "Created", message: {product: @product, categories: @product.categories}} if @product.save
         render status: :bad_request, json: {cod: 400, status: "Bad Request", message: error_message(@product.errors)} unless @error || @product.save
       end
 
       def update
         if @product.update(product_params.except(:category_ids))
-          to_ar(params[:category_ids]).each {|category_id| insert_into_product(category_id)}
-          render json: {cod: 200, status: "OK", message: {product: @product, categories: @product.categories}}
+          to_ar(params[:category_ids]).each {|category_id| insert_into_product(category_id)} if params[:category_ids]
+          render json: {cod: 200, status: "OK", message: {product: @product, categories: @product.categories}}  unless @error
         else
           render status: :bad_request, json: {cod: 400, status: "Bad Request", message: error_message(@product.errors)} unless @error
         end
@@ -39,7 +39,7 @@ module Api
         if category
           @product.categories << category if @product.categories.find_by(name: category.name).blank?
         else
-          @product.destroy
+          @product.destroy if @product.new_record?
           @error = true
           render status: :bad_request, json: {cod: 400, status: "Bad Request", message: "Categoria invalida ou não existe"} if @product.destroy
         end
