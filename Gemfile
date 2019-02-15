@@ -6,6 +6,7 @@ ruby '2.6.1'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 gem 'puma', '~> 3.11'
+gem 'rails-i18n'
 gem 'rails', '~> 5.2.2'
 
 group :development, :test do
