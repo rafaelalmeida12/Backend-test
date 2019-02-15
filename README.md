@@ -85,6 +85,8 @@ Example Error
 }
 ```
 
+---
+
 ##### Editing products
 
 ```
@@ -137,6 +139,8 @@ Example Error
 }
 ```
 
+---
+
 ##### Show Specific product
 
 ```
@@ -184,6 +188,8 @@ Example Error
     "message": "O produto não foi encontrado"
 }
 ```
+
+---
 
 ##### Destroying product
 
