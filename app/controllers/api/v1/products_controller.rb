@@ -41,7 +41,7 @@ module Api
         else
           @product.destroy if @product.new_record?
           @error = true
-          render status: :bad_request, json: {cod: 400, status: "Bad Request", message: "Categoria invalida ou não existe"} if @product.destroy
+          render status: :bad_request, json: {cod: 400, status: "Bad Request", message: "Categoria invalida ou não existe"}
         end
       end
 
