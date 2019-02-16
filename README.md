@@ -222,3 +222,11 @@ Example Error
     "message": "O produto não foi encontrado"
 }
 ```
+
+## Categories
+
+##### Catching all categories
+
+```
+    GET /api/v1/categories
+```
