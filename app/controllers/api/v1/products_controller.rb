@@ -29,7 +29,6 @@ module Api
       end
 
       def destroy
-        @product.destroy if @product
         render json: {cod: 200, status: "OK", message: "Excluído com sucesso"} if @product.destroy
       end
 
