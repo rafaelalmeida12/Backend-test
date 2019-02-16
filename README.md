@@ -87,7 +87,7 @@ Example Error
 
 ---
 
-##### Editing products
+##### Update products
 
 ```
     PATCH  /api/v1/products/:id
@@ -229,4 +229,185 @@ Example Error
 
 ```
     GET /api/v1/categories
+```
+
+params
+
+```
+    no params
+```
+
+Example Success
+
+```{json}
+{
+    "cod": 200,
+    "status": "OK",
+    "message": {
+        "categories": [
+            {
+                "id": 1,
+                "name": "testando",
+                "created_at": "2019-02-16T02:00:18.000Z",
+                "updated_at": "2019-02-16T02:00:18.000Z"
+            }
+        ]
+    }
+}
+```
+
+##### Create category
+
+```{json}
+    POST /api/v1/categories
+```
+
+params
+
+|   params     |    type    |     example      |
+|:------------:|:----------:|:----------------:|
+|   name       |   string   |     teste        |
+
+
+Example Success
+
+```{json}
+{
+    "cod": 200,
+    "status": "OK",
+    "message": {
+        "category": {
+            "id": 2,
+            "name": "teste",
+            "created_at": "2019-02-16T02:02:08.000Z",
+            "updated_at": "2019-02-16T02:02:08.000Z"
+        }
+    }
+}
+```
+
+Example Error
+
+```{json}
+{
+    "cod": 400,
+    "status": "Bad Request",
+    "message": [
+        "name - já está em uso"
+    ]
+}
+```
+
+##### Update category
+
+```
+    PATCH /api/v1/categories/:id
+            or
+    PUT /api/v1/categories/:id
+```
+
+params
+
+|   params     |    type    |     example      |
+|:------------:|:----------:|:----------------:|
+|   name       |   string   |     teste        |
+
+Example Success
+
+```{json}
+{
+    "cod": 200,
+    "status": "OK",
+    "message": {
+        "category": {
+            "id": 1,
+            "name": "testying",
+            "created_at": "2019-02-16T02:00:18.000Z",
+            "updated_at": "2019-02-16T02:05:39.000Z"
+        }
+    }
+}
+```
+
+Example Error
+
+```{json}
+{
+    "cod": 400,
+    "status": "Bad Request",
+    "message": [
+        "name - não pode ficar em branco"
+    ]
+}
+```
+
+##### Show Specific category
+
+```
+    GET /api/v1/categories/:id
+```
+
+params
+
+```
+    no need params
+```
+
+Example Success
+
+```{json}
+{
+    "cod": 200,
+    "status": "OK",
+    "message": {
+        "category": {
+            "id": 1,
+            "name": "testying",
+            "created_at": "2019-02-16T02:00:18.000Z",
+            "updated_at": "2019-02-16T02:05:39.000Z"
+        }
+    }
+}
+```
+
+Example Error
+
+```{json}
+{
+    "cod": 404,
+    "status": "Not Found",
+    "message": "A categoria não foi encontrada"
+}
+```
+
+##### Destroy category
+
+```
+    DELETE /api/v1/categories/:id
+```
+
+params
+
+```
+    no need params
+```
+
+Example Success
+
+```{json}
+{
+    "cod": 200,
+    "status": "OK",
+    "message": "Excluido com sucesso"
+}
+```
+
+Example Error 
+
+```{json}
+{
+    "cod": 404,
+    "status": "Not Found",
+    "message": "A categoria não foi encontrada"
+}
 ```
