@@ -490,4 +490,10 @@ Before test or use the application make the migrations
 ```
    sudo docker-compose run rails rails db:create db:migrate
 ```
+
 Explected Output
+
+
+## Database Structure
+
+![Database Structure](/storage/database_structure.png)
