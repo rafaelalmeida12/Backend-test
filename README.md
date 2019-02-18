@@ -342,7 +342,7 @@ Example Success
     "message": {
         "category": {
             "id": 1,
-            "name": "testying",
+            "name": "testing",
             "created_at": "2019-02-16T02:00:18.000Z",
             "updated_at": "2019-02-16T02:05:39.000Z"
         }
@@ -383,7 +383,7 @@ Example Success
     "message": {
         "category": {
             "id": 1,
-            "name": "testying",
+            "name": "testing",
             "created_at": "2019-02-16T02:00:18.000Z",
             "updated_at": "2019-02-16T02:05:39.000Z"
         }
