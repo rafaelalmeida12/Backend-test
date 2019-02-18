@@ -11,6 +11,14 @@ Rest API status codes
 |   500   |   Internal Server Error   |  means the server is not ok, wait some minutes or call the developers          |
 
 
+## Tools - Versions
+
+* Ruby - 2.6.1
+* Rails - 5.2.2
+* mariadb - lastest:10.2
+
+you can see more about the tools and versions into [Gemlock](Gemfile.lock) file
+
 ## Products
 
 ##### Catching all products
