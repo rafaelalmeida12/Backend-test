@@ -496,4 +496,4 @@ Explected Output
 
 ## Database Structure
 
-![Database Structure](/storage/database_structure.png)
+![Database Structure](/storage/database_structure_min.png)
