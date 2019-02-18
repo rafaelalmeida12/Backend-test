@@ -433,6 +433,32 @@ Example Error
 }
 ```
 
+## Tests
+
+##### Unit Tests
+
+Running unit tests
+
+```
+    rails test
+```
+
+Expected output
+
+![unit test](/storage/unit_test_expected_output.png)
+
+---
+
+##### Cucumber Tests
+
+---
+
+##### Code Complexity Test
+
+---
+
+##### Security Test
+
 ## Docker
 
 Execute docker compose running the command above on terminal
