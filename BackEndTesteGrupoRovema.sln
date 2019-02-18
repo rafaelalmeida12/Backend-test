@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackEndTesteGrupoRovema", "BackEndTesteGrupoRovema\BackEndTesteGrupoRovema.csproj", "{4A647D61-0FBE-4880-9DA3-16F43F5B44D5}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0B7C6E04-4CA3-4E5B-9FC9-591F6BB995F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A647D61-0FBE-4880-9DA3-16F43F5B44D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A647D61-0FBE-4880-9DA3-16F43F5B44D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A647D61-0FBE-4880-9DA3-16F43F5B44D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A647D61-0FBE-4880-9DA3-16F43F5B44D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B7C6E04-4CA3-4E5B-9FC9-591F6BB995F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B7C6E04-4CA3-4E5B-9FC9-591F6BB995F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B7C6E04-4CA3-4E5B-9FC9-591F6BB995F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B7C6E04-4CA3-4E5B-9FC9-591F6BB995F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {379DF4F4-F39A-447B-9ABF-9DDF900FEE8C}
+	EndGlobalSection
+EndGlobal
