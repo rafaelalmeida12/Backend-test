@@ -12,9 +12,6 @@ RUN gem update --system
 RUN gem install bundler
 RUN bundle install
 
-ENV database_user root
-ENV database_pass root
-
 EXPOSE 3000
 
 CMD ["rails", "server", "-b", "0.0.0.0"]

@@ -30,20 +30,6 @@ Rest API status codes
 
 you can see more about the tools and versions into [Gemlock](Gemfile.lock) file
 
-## Starting Application
-
-Create a database
-
-```
-    rails db:create
-```
-
-Run migrations
-
-```
-    rails db:migrate
-```
-
 ## Products
 
 ##### Catching all products
@@ -489,7 +475,7 @@ Expected output
 Execute docker compose running the command above on terminal
 
 ```
-    sudo docker-compose up -d
+    sudo docker-compose up -d --build
 ```
 
 Expected output
@@ -498,3 +484,10 @@ Expected output
 
 I configured a Dockerfile on hand and can be found in this [path](Dockerfile) you also can see with
 details the docker compose configuration into [docker-compose.yml](docker-compose.yml)
+
+Before test or use the application make the migrations
+
+```
+   sudo docker-compose run rails rails db:create db:migrate
+```
+Explected Output

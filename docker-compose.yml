@@ -22,5 +22,10 @@ services:
       - .:/app
     ports:
       - 3000:3000
-    links:
-      - "mariadb:mariadb"
+    environment:
+      - database_user=root
+      - database_pass=root
+    depends_on:
+      - mariadb
+    external_links:
+      - mariadb:mariadb
