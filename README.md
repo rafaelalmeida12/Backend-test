@@ -424,3 +424,18 @@ Example Error
     "message": "A categoria não foi encontrada"
 }
 ```
+
+## Docker
+
+Execute docker compose running the command above on terminal
+
+```
+    sudo docker-compose up -d
+```
+
+Expected output
+
+![docker compose](/storage/docker_compose_expected_output.png)
+
+I configured a Dockerfile on hand and can be found in this [path](Dockerfile) you also can see with
+details the docker compose configuration into [docker-compose.yml](docker-compose.yml)
