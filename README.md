@@ -1,3 +1,16 @@
+# Backend-test Rovema
+
+Rest API status codes
+
+|   Cod   |   Status                  |                             Details                                            |
+|:-------:|:-------------------------:|:------------------------------------------------------------------------------:|
+|   200   |   OK                      |  means that your request and params is right to execute the program            |
+|   201   |   Created                 |  means that your request and params is right to and created what you requested |
+|   400   |   Bad Request             |  means that you did something wrong follow the "message" to fix it             |
+|   404   |   Not Found               |  means the url that you're trying to request does not exist                    |
+|   500   |   Internal Server Error   |  means the server is not ok, wait some minutes or call the developers          |
+
+
 ## Products
 
 ##### Catching all products
