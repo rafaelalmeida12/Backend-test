@@ -11,6 +11,7 @@ gem 'rails', '~> 5.2.2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'faker'
 end
 
 group :development do
@@ -27,7 +28,6 @@ group :test do
   gem 'chromedriver-helper'
   gem 'rubycritic'
   gem 'rspec-rails'
-  gem 'faker'
   gem 'brakeman'
   gem 'rubocop'
   gem 'cucumber'

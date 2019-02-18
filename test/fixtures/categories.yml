@@ -1,0 +1,7 @@
+one:
+  id: 1
+  name: "teste not destroyed"
+
+two:
+  id: 2
+  name: "teste destroyed"

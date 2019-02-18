@@ -10,7 +10,7 @@ module Api
 
       def create
         @category = Category.new(category_params)
-        render json: {cod: 200, status: "OK", message: {category: @category}} if @category.save
+        render status: :created, json: {cod: 201, status: "created", message: {category: @category}} if @category.save
         render status: :bad_request, json: {cod: 400, status: "Bad Request", message: error_message(@category.errors)} unless @category.save
       end
 
