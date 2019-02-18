@@ -19,6 +19,26 @@ Rest API status codes
 
 you can see more about the tools and versions into [Gemlock](Gemfile.lock) file
 
+## Starting Application
+
+First you need install all required packages
+
+```
+    bundle install
+```
+
+Create a database
+
+```
+    rails db:create
+```
+
+Run migrations
+
+```
+    rails db:migrate
+```
+
 ## Products
 
 ##### Catching all products
