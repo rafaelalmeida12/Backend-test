@@ -1,0 +1,26 @@
+version: "3"
+services:
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    container_name: 'mariadb'
+    ports:
+      - 3306:3306
+    volumes:
+      - /storage/mariadb:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+
+
+  rails:
+    build: .
+    restart: always
+    image: oliveira-andre/backend-test_rails
+    command: rails s -e production
+    container_name: 'rails'
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    links:
+      - "mariadb:mariadb"
