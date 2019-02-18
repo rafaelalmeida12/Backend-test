@@ -1,0 +1,9 @@
+one:
+  id: 1
+  name: "test not destroyed"
+  price: 123.12
+
+two:
+  id: 2
+  name: "test destroyed"
+  price: 321.21
