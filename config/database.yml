@@ -3,22 +3,24 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: 127.0.0.1
-  port: 3306
 
 development:
   <<: *default
   database: Backend-test_development
   username: root
   password: root
+  port: 3306
 
 test:
   <<: *default
   database: Backend-test_test
   username: root
   password: root
+  port: 3306
 
 production:
   <<: *default
+  host: mariadb
   database: Backend-test_production
   username: <%= ENV['database_user'] %>
   password: <%= ENV['database_pass'] %>
