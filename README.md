@@ -13,19 +13,24 @@ Rest API status codes
 
 ## Tools - Versions
 
-* Ruby - 2.6.1
-* Rails - 5.2.2
-* mariadb - lastest:10.2
+* [Ruby - 2.6.1](https://ruby-doc.org/)
+* [Rails - 5.2.2](https://rubygems.org/gems/rails)
+* [mariadb - lastest:10.2](https://mariadb.com/kb/en/library/documentation/)
+* [capybara - 3.13.2](https://rubygems.org/gems/capybara)
+* [selenium-webdriver - 2.53.0](http://www.rubydoc.info/gems/selenium-webdriver/2.53.0http://www.rubydoc.info/gems/selenium-webdriver/2.53.0)
+* [chromedriver-helper - 2.1.0](https://rubygems.org/gems/chromedriver-helper)
+* [rubycritic - 3.5.2](https://rubygems.org/gems/rubycritic)
+* [rspec-rails - 3.8.2](https://rubygems.org/gems/rspec-rails)
+* [brakeman - 4.4.0](https://rubygems.org/gems/brakeman)
+* [rubocop - 0.64.0](https://rubygems.org/gems/rubocop)
+* [cucumber - 3.1.2](https://rubygems.org/gems/cucumber)
+* [faker - 1.9.3](https://rubygems.org/gems/faker)
+* [Docker compose - 1.23.2](https://docs.docker.com/compose/)
+* [Docker - 18.06.1-ce](https://docs.docker.com/)
 
 you can see more about the tools and versions into [Gemlock](Gemfile.lock) file
 
 ## Starting Application
-
-First you need install all required packages
-
-```
-    bundle install
-```
 
 Create a database
 

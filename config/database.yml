@@ -20,5 +20,5 @@ test:
 production:
   <<: *default
   database: Backend-test_production
-  username: Rails.application.credentials.database_user
-  password: Rails.application.credentials.database_pass
+  username: <%= ENV['database_user'] %>
+  password: <%= ENV['database_pass'] %>
