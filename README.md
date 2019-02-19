@@ -25,6 +25,8 @@ Rest API status codes
 * [rubocop - 0.64.0](https://rubygems.org/gems/rubocop)
 * [cucumber - 3.1.2](https://rubygems.org/gems/cucumber)
 * [faker - 1.9.3](https://rubygems.org/gems/faker)
+* [httparty - 0.16.4](https://rubygems.org/gems/httparty)
+* [factory_bot - 5.0.1](https://rubygems.org/gems/factory_bot)
 * [Docker compose - 1.23.2](https://docs.docker.com/compose/)
 * [Docker - 18.06.1-ce](https://docs.docker.com/)
 
@@ -492,6 +494,9 @@ Before test or use the application make the migrations
 ```
 
 Explected Output
+
+![docker migrations](/storage/docker_migrations_expected_output.png)
+
 
 
 ## Database Structure
