@@ -25,14 +25,15 @@ end
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'database_cleaner'
   gem 'chromedriver-helper'
   gem 'rubycritic'
   gem 'rspec-rails'
   gem 'brakeman'
   gem 'rubocop'
-  gem 'cucumber'
-  gem 'cucumber-rails', '~>1.6.0'
   gem 'httparty'
+  gem 'factory_bot'
+  gem 'shoulda-matchers'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
