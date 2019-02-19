@@ -31,6 +31,8 @@ group :test do
   gem 'brakeman'
   gem 'rubocop'
   gem 'cucumber'
+  gem 'cucumber-rails', '~>1.6.0'
+  gem 'httparty'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
