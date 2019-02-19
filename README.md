@@ -448,7 +448,7 @@ Example Error
 
 ## Tests
 
-> To run the tests into your local machine comment the host: mariadb into config/database.yml and uncomment the port:3306 or just execute in container
+> To run the tests into your local machine comment the host: mariadb into [config/database.yml](/config/database.yml) and uncomment the port:3306 or just execute in container
 
 ##### Unit Tests
 
