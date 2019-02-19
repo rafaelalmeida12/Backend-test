@@ -37,7 +37,7 @@ you can see more about the tools and versions into [Gemlock](Gemfile.lock) file
 ##### Catching all products
 
 ```
-    GET /api/v1/products
+    GET https://backend-inventary.herokuapp.com/api/v1/products
 ```
 
 params
@@ -69,7 +69,7 @@ Example Success
 ##### Creating new products
 
 ```
-    POST /api/v1/products
+    POST https://backend-inventary.herokuapp.com/api/v1/products
 ```
 
 params
@@ -124,9 +124,9 @@ Example Error
 ##### Update products
 
 ```
-    PATCH  /api/v1/products/:id
+    PATCH  https://backend-inventary.herokuapp.com/api/v1/products/:id
                 or
-    PUT  /api/v1/products/:id
+    PUT  https://backend-inventary.herokuapp.com/api/v1/products/:id
 ```
 
 params
@@ -178,7 +178,7 @@ Example Error
 ##### Show Specific product
 
 ```
-    GET /api/v1/products/:id
+    GET https://backend-inventary.herokuapp.com/api/v1/products/:id
 ```
 
 params
@@ -228,7 +228,7 @@ Example Error
 ##### Destroying product
 
 ```
-    DELETE /api/v1/products/:id
+    DELETE https://backend-inventary.herokuapp.com/api/v1/products/:id
 ```
 
 params
@@ -262,7 +262,7 @@ Example Error
 ##### Catching all categories
 
 ```
-    GET /api/v1/categories
+    GET https://backend-inventary.herokuapp.com/api/v1/categories
 ```
 
 params
@@ -292,8 +292,8 @@ Example Success
 
 ##### Create category
 
-```{json}
-    POST /api/v1/categories
+```
+    POST https://backend-inventary.herokuapp.com/api/v1/categories
 ```
 
 params
@@ -335,9 +335,9 @@ Example Error
 ##### Update category
 
 ```
-    PATCH /api/v1/categories/:id
+    PATCH https://backend-inventary.herokuapp.com/api/v1/categories/:id
             or
-    PUT /api/v1/categories/:id
+    PUT https://backend-inventary.herokuapp.com/api/v1/categories/:id
 ```
 
 params
@@ -378,7 +378,7 @@ Example Error
 ##### Show Specific category
 
 ```
-    GET /api/v1/categories/:id
+    GET https://backend-inventary.herokuapp.com/api/v1/categories/:id
 ```
 
 params
@@ -417,7 +417,7 @@ Example Error
 ##### Destroy category
 
 ```
-    DELETE /api/v1/categories/:id
+    DELETE https://backend-inventary.herokuapp.com/api/v1/categories/:id
 ```
 
 params
