@@ -450,7 +450,7 @@ Example Error
 
 ##### Unit Tests
 
-> To run the tests into your local machine comment the host: mariadb into config/database.yml or just execute in container
+> To run the tests into your local machine comment the host: mariadb into config/database.yml and uncomment the port:3306 or just execute in container
 
 Running unit tests
 
@@ -522,6 +522,13 @@ Explected Output
 
 ![docker migrations](/storage/docker_migrations_expected_output.png)
 
+Running unit tests in docker
+
+```
+    sudo docker-compose run rails rails test
+```
+
+![docker unit test](/storage/docker_unit_test_expected_output.png.png)
 
 
 ## Database Structure

@@ -13,9 +13,11 @@ development:
 
 test: &test
   <<: *default
+  host: mariadb
   database: Backend-test_test
   username: root
   password: root
+#  port: 3306
 
 production:
   <<: *default

@@ -34,7 +34,7 @@ module Api
       end
 
       def insert_into_product(id)
-        category = Category.find(id) if Category.exists?['id = ?', id]
+        category = Category.find(id) if Category.exists?(id: params[:id])
         @error = false
         if category
           @product.categories << category if @product.categories.find_by(name: category.name).blank?
