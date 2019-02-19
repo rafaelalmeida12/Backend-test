@@ -11,7 +11,9 @@ namespace BackEndTesteGrupoRovema.Models
         public string Nome { get; set; }
         public decimal Preco { get; set; }
 
-        
+        public ICollection<Categoria> Categorias  { get; set; }
+
+
 
     }
 }

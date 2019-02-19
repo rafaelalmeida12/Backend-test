@@ -198,6 +198,10 @@
     <Compile Include="Migrations\201902181410084_Banco de Dados Inicial.Designer.cs">
       <DependentUpon>201902181410084_Banco de Dados Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902192108431_Criando Relacionamento entre classes Produto e Categoria.cs" />
+    <Compile Include="Migrations\201902192108431_Criando Relacionamento entre classes Produto e Categoria.Designer.cs">
+      <DependentUpon>201902192108431_Criando Relacionamento entre classes Produto e Categoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Produto.cs" />
@@ -295,6 +299,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201902181410084_Banco de Dados Inicial.resx">
       <DependentUpon>201902181410084_Banco de Dados Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902192108431_Criando Relacionamento entre classes Produto e Categoria.resx">
+      <DependentUpon>201902192108431_Criando Relacionamento entre classes Produto e Categoria.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
