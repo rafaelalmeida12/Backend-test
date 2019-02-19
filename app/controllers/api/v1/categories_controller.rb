@@ -31,7 +31,7 @@ module Api
 
       def set_category
         @category = Category.find(params[:id]) if Category.exists?['id = ?', params[:id]]
-        render status: :not_found, json: {cod: 404, status: "Not Found", message: "A categoria não foi encontrada"} unless Category.exists?(params[:id])
+        render status: :not_found, json: {cod: 404, status: "Not Found", message: "A categoria não foi encontrada"} unless Category.exists?['id = ?', params[:id]]
       end
 
       def category_params
