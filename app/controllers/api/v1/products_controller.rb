@@ -34,7 +34,7 @@ module Api
       end
 
       def insert_into_product(id)
-        category = Category.find(id) if Category.exists?(id)
+        category = Category.find(id) if Category.exists?['id = ?', id]
         @error = false
         if category
           @product.categories << category if @product.categories.find_by(name: category.name).blank?
@@ -47,8 +47,8 @@ module Api
       private
 
       def find_product
-        @product = Product.find(params[:id]) if Product.exists?(params[:id])
-        render status: :not_found, json: {cod: 404, status: "Not Found", message: "O produto não foi encontrado"} unless Product.exists?(params[:id])
+        @product = Product.find(params[:id]) if Product.exists?['id = ?', params[:id]]
+        render status: :not_found, json: {cod: 404, status: "Not Found", message: "O produto não foi encontrado"} unless Product.exists?['id = ?', params[:id]]
       end
 
       def product_params

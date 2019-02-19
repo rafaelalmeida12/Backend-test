@@ -462,11 +462,22 @@ Expected output
 
 ---
 
-##### Cucumber Tests
+##### Rspec Tests
+
+```
+    bundle exec rspec
+```
+
+Expected output
+
 
 ---
 
 ##### Code Complexity Test
+
+```
+    rubycritic
+```
 
 ---
 
