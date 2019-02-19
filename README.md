@@ -450,6 +450,8 @@ Example Error
 
 ##### Unit Tests
 
+> To run the tests into your local machine comment the host: mariadb into config/database.yml or just execute in container
+
 Running unit tests
 
 ```
@@ -470,6 +472,7 @@ Expected output
 
 Expected output
 
+![rspec](/storage/rspec_expected_output.png)
 
 ---
 
@@ -479,9 +482,20 @@ Expected output
     rubycritic
 ```
 
+Expected output
+
+![rubycritic](/storage/rubycritic_expected_output.png)
 ---
 
 ##### Security Test
+
+```
+    brakeman
+```
+
+Expected output
+
+![brakeman](/storage/brakeman_expected_output.png)
 
 ## Docker
 

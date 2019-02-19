@@ -47,8 +47,8 @@ module Api
       private
 
       def find_product
-        @product = Product.find(params[:id]) if Product.exists?['id = ?', params[:id]]
-        render status: :not_found, json: {cod: 404, status: "Not Found", message: "O produto não foi encontrado"} unless Product.exists?['id = ?', params[:id]]
+        @product = Product.find(params[:id]) if Product.exists?(id: params[:id])
+        render status: :not_found, json: {cod: 404, status: "Not Found", message: "O produto não foi encontrado"} unless Product.exists?(id: params[:id])
       end
 
       def product_params
