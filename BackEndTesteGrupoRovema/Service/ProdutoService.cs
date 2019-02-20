@@ -24,11 +24,13 @@ namespace BackEndTesteGrupoRovema.Service
 
         public bool SaveProduto(Produto produto)
         {
+
             try
             {
                 context.Produtos.Add(produto);
-                context.SaveChanges();
+                context.SaveChanges();      
                 return true;
+
             }
             catch (Exception)
             {
