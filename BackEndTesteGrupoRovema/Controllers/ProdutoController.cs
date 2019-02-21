@@ -14,7 +14,6 @@ namespace BackEndTesteGrupoRovema.Controllers
     {
         private  IProdutoInterface produtoService = new ProdutoService();
         
-
         public IEnumerable<Produto> Get()
         {
             return produtoService.GetProdutos();
@@ -32,7 +31,8 @@ namespace BackEndTesteGrupoRovema.Controllers
 
         public IHttpActionResult Post([FromBody]Produto produto)
          {
-            var saveProduto = produtoService.SaveProduto(produto);
+            Categoria c = new Categoria();
+            var saveProduto = produtoService.SaveProduto(produto,c);
             if (saveProduto == true)
             {
                 return Ok();

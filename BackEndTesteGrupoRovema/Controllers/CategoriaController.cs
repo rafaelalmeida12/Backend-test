@@ -12,17 +12,17 @@ namespace BackEndTesteGrupoRovema.Controllers
 {
     public class CategoriaController : ApiController
     {
-        private CategoriaService cService = new CategoriaService();
+        private CategoriaService categoriaService = new CategoriaService();
 
-        public IList<Categoria> Get()
+        public IEnumerable<Categoria> Get()
         {
-            return cService.GetCategorias();
+            return categoriaService.GetCategorias();
 
         }
 
         public IHttpActionResult Get(int id)
         {
-            var getCategoria = cService.GetById(id);
+            var getCategoria = categoriaService.GetById(id);
             if (getCategoria == null)
             {
                 return NotFound();
@@ -32,14 +32,14 @@ namespace BackEndTesteGrupoRovema.Controllers
 
         public IHttpActionResult Post(Categoria c)
         {
-            var save = cService.SaveCategoria(c);
+            var save = categoriaService.SaveCategoria(c);
             return Ok();
 
         }
 
         public IHttpActionResult Put(Categoria c)
         {
-            var update = cService.UpdateCategoria(c, c.Id);
+            var update = categoriaService.UpdateCategoria(c, c.Id);
             if (update == true)
             {
                 return Ok();
@@ -49,7 +49,7 @@ namespace BackEndTesteGrupoRovema.Controllers
 
         public IHttpActionResult Delete(int id)
         {
-            var delete = cService.Delete(id);
+            var delete = categoriaService.Delete(id);
             if (delete == true)
             {
                 return Ok();

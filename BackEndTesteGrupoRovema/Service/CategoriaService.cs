@@ -32,7 +32,7 @@ namespace BackEndTesteGrupoRovema.Service
             return context.Categorias.Where(c => c.Id == id).FirstOrDefault();
         }
 
-        public List<Categoria> GetCategorias()
+        public IEnumerable<Categoria> GetCategorias()
         {
             return context.Categorias.ToList();
         }

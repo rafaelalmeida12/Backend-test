@@ -13,7 +13,7 @@ namespace BackEndTesteGrupoRovema.Service
     {
         private Context context = new Context();
 
-        public List<Produto> GetProdutos()
+        public IEnumerable<Produto> GetProdutos()
         {
             return context.Produtos.ToList();
         }
@@ -22,13 +22,17 @@ namespace BackEndTesteGrupoRovema.Service
             return context.Produtos.Where(x => x.Id == id).FirstOrDefault();
         }
 
-        public bool SaveProduto(Produto produto)
+        public bool SaveProduto(Produto p, Categoria categoria)
         {
-
             try
             {
-                context.Produtos.Add(produto);
-                context.SaveChanges();      
+                // Foreach para assim o entity verificar a Categoria já existe no banco e não fazer uma nova inserção
+                foreach (Categoria c in p.Categorias)
+                {
+                    context.Categorias.Attach(c);
+                }
+                context.Produtos.Add(p);
+                context.SaveChanges();
                 return true;
 
             }

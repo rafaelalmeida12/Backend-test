@@ -9,12 +9,11 @@ namespace BackEndTesteGrupoRovema.Service
 {
     public interface ICategoriaInterface
     {
+        
         bool SaveCategoria(Categoria c);
         bool UpdateCategoria(Categoria c, int id);
-        List<Categoria> GetCategorias();
+        IEnumerable<Categoria> GetCategorias();
         Categoria GetById(int id);
         bool Delete(int id);
-
-
     }
 }

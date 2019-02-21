@@ -10,9 +10,9 @@ namespace BackEndTesteGrupoRovema.Service
     public interface IProdutoInterface
     {
 
-        List<Produto> GetProdutos();
+        IEnumerable<Produto> GetProdutos();
         Produto GetProduto(int id);
-        bool SaveProduto(Produto produto);
+        bool SaveProduto(Produto p, Categoria categoria);
         bool UpdateProduto(int id, Produto p);
         bool DeleteProduto(int id);
 
