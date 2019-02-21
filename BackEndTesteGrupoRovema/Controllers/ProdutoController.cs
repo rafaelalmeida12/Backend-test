@@ -10,6 +10,7 @@ using BackEndTesteGrupoRovema.Service;
 
 namespace BackEndTesteGrupoRovema.Controllers
 {
+    [RoutePrefix("api/Produto")]
    public class ProdutoController : ApiController
     {
         private  IProdutoInterface produtoService = new ProdutoService();
@@ -19,6 +20,8 @@ namespace BackEndTesteGrupoRovema.Controllers
             return produtoService.GetProdutos();
         }
 
+        
+        
         public IHttpActionResult Get(int id)
         {
             var getProduto = produtoService.GetProduto(id);
@@ -27,6 +30,18 @@ namespace BackEndTesteGrupoRovema.Controllers
                 return NotFound();
             }
             return Ok(getProduto);           
+        }
+
+
+        [Route("{nome}")]
+        public IHttpActionResult GetByNome(string nome)
+        {
+            var getPorNome = produtoService.GetByNome(nome);
+            if (getPorNome == null)
+            {
+                return NotFound();
+            }
+            return Ok(getPorNome);
         }
 
         public IHttpActionResult Post([FromBody]Produto produto)

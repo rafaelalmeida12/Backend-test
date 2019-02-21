@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace BackEndTesteGrupoRovema.Controllers
 {
+    [RoutePrefix("api/Categoria")]
     public class CategoriaController : ApiController
     {
         private CategoriaService categoriaService = new CategoriaService();
@@ -23,6 +24,18 @@ namespace BackEndTesteGrupoRovema.Controllers
         public IHttpActionResult Get(int id)
         {
             var getCategoria = categoriaService.GetById(id);
+            if (getCategoria == null)
+            {
+                return NotFound();
+            }
+            return Ok(getCategoria);
+        }
+
+
+        [Route("{nome}")]
+        public IHttpActionResult GetByNome(string nome)
+        {
+            var getCategoria = categoriaService.GetByNome(nome);
             if (getCategoria == null)
             {
                 return NotFound();

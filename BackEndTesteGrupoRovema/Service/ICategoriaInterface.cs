@@ -15,5 +15,6 @@ namespace BackEndTesteGrupoRovema.Service
         IEnumerable<Categoria> GetCategorias();
         Categoria GetById(int id);
         bool Delete(int id);
+        IEnumerable<Categoria> GetByNome(string nome);
     }
 }

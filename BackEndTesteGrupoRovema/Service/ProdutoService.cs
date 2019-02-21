@@ -22,6 +22,13 @@ namespace BackEndTesteGrupoRovema.Service
             return context.Produtos.Where(x => x.Id == id).FirstOrDefault();
         }
 
+        public Produto GetByNome(string nome)
+        {
+            return context.Produtos.Where(p => p.Nome.Contains(nome)).First();
+        }
+
+
+
         public bool SaveProduto(Produto p, Categoria categoria)
         {
             try

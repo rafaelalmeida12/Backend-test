@@ -32,6 +32,11 @@ namespace BackEndTesteGrupoRovema.Service
             return context.Categorias.Where(c => c.Id == id).FirstOrDefault();
         }
 
+        public IEnumerable<Categoria> GetByNome(string nome)
+        {
+            return context.Categorias.Where(c => c.Nome.Contains(nome));
+        }
+
         public IEnumerable<Categoria> GetCategorias()
         {
             return context.Categorias.ToList();

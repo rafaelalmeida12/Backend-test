@@ -15,6 +15,8 @@ namespace BackEndTesteGrupoRovema.Service
         bool SaveProduto(Produto p, Categoria categoria);
         bool UpdateProduto(int id, Produto p);
         bool DeleteProduto(int id);
+        Produto GetByNome(string nome);
+       
 
     }
 }
