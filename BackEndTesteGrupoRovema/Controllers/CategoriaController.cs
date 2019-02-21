@@ -60,6 +60,7 @@ namespace BackEndTesteGrupoRovema.Controllers
             return BadRequest();
         }
 
+        [Route("{id:int}")]
         public IHttpActionResult Delete(int id)
         {
             var delete = categoriaService.Delete(id);

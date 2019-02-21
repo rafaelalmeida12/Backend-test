@@ -24,6 +24,7 @@ namespace BackEndTesteGrupoRovema.Service
 
         public Produto GetByNome(string nome)
         {
+            
             return context.Produtos.Where(p => p.Nome.Contains(nome)).First();
         }
 

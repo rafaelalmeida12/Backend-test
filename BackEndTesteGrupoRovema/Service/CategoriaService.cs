@@ -14,14 +14,12 @@ namespace BackEndTesteGrupoRovema.Service
 
         public bool Delete(int id)
         {
-            var categoria = context.Categorias.Where(c => c.Id == id);
-            if (categoria == null)
+            try
             {
-                return false;
-            }
-            else
-            {
-                context.Entry(categoria).State = EntityState.Deleted;
+                Categoria c = context.Categorias.Find(id);//Buscar o Id passado como parâmetro no Banco
+                List<Produto> produtos = c.Produtos.ToList();//Busca os produtos relacionados com o Id passado como parâmetro
+                produtos.ForEach(p => c.Produtos.Remove(p));//Remove as categorias dos produtos
+                context.Categorias.Remove(c);//remove categorias
                 context.SaveChanges();
                 return true;
             }
