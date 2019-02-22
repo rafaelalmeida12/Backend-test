@@ -13,7 +13,7 @@ namespace BackEndTesteGrupoRovema.Service
         IEnumerable<Produto> GetProdutos();
         Produto GetProduto(int id);
         bool SaveProduto(Produto p, Categoria categoria);
-        bool UpdateProduto(int id, Produto p);
+        bool UpdateProduto(int prodId, Produto p);
         bool DeleteProduto(int id);
         Produto GetByNome(string nome);
        

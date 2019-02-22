@@ -23,6 +23,10 @@ namespace BackEndTesteGrupoRovema.Service
                 context.SaveChanges();
                 return true;
             }
+            catch(Exception)
+            {
+                return false;
+            }
         }
 
         public Categoria GetById(int id)

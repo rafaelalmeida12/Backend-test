@@ -26,7 +26,7 @@ namespace BackEndTesteGrupoRovema.Controllers
             var getCategoria = categoriaService.GetById(id);
             if (getCategoria == null)
             {
-                return NotFound();
+                return Content(HttpStatusCode.NotFound, "Resource not found");
             }
             return Ok(getCategoria);
         }
@@ -38,7 +38,7 @@ namespace BackEndTesteGrupoRovema.Controllers
             var getCategoria = categoriaService.GetByNome(nome);
             if (getCategoria == null)
             {
-                return NotFound();
+                return Content(HttpStatusCode.NotFound, "Resource not found");
             }
             return Ok(getCategoria);
         }
@@ -46,7 +46,7 @@ namespace BackEndTesteGrupoRovema.Controllers
         public IHttpActionResult Post(Categoria c)
         {
             var save = categoriaService.SaveCategoria(c);
-            return Ok();
+            return Content(HttpStatusCode.OK, "Successful");
 
         }
 
@@ -55,9 +55,9 @@ namespace BackEndTesteGrupoRovema.Controllers
             var update = categoriaService.UpdateCategoria(c, c.Id);
             if (update == true)
             {
-                return Ok();
+                return Content(HttpStatusCode.OK, "Successful");
             }
-            return BadRequest();
+            return Content(HttpStatusCode.BadRequest, "Bad input parameter");
         }
 
         [Route("{id:int}")]
@@ -66,9 +66,9 @@ namespace BackEndTesteGrupoRovema.Controllers
             var delete = categoriaService.Delete(id);
             if (delete == true)
             {
-                return Ok();
+                return Content(HttpStatusCode.OK, "Successful");
             }
-            return BadRequest();
+            return Content(HttpStatusCode.BadRequest, "Bad input parameter");
         }
 
 

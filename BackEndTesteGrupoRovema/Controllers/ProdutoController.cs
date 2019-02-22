@@ -18,10 +18,11 @@ namespace BackEndTesteGrupoRovema.Controllers
         public IEnumerable<Produto> Get()
         {
             return produtoService.GetProdutos();
+            
         }
 
         
-        
+        [Route("{id:int}")]
         public IHttpActionResult Get(int id)
         {
             var getProduto = produtoService.GetProduto(id);
@@ -39,41 +40,49 @@ namespace BackEndTesteGrupoRovema.Controllers
             var getPorNome = produtoService.GetByNome(nome);
             if (getPorNome == null)
             {
-                return NotFound();
+                return Content(HttpStatusCode.NotFound,"Resource not found");
             }
             return Ok(getPorNome);
         }
 
         public IHttpActionResult Post([FromBody]Produto produto)
          {
+            
             Categoria c = new Categoria();
             var saveProduto = produtoService.SaveProduto(produto,c);
             if (saveProduto == true)
             {
-                return Ok();
+                return Content(HttpStatusCode.OK,"Successful");
             }
-                return BadRequest();
+                return Content(HttpStatusCode.BadRequest,"Bad input parameter");
         }
 
+        
         public IHttpActionResult Put([FromBody] Produto p)
         {
+
+            
             var updateProduto = produtoService.UpdateProduto(p.Id,p);
             if (updateProduto == true)
             {
-                return Ok();
+                return Content(HttpStatusCode.OK,"Successful");
             }
-            return BadRequest();
+            return Content(HttpStatusCode.BadRequest, "Bad input parameter");
+
         }
 
+
+        [Route("{id:int}")]
         public IHttpActionResult Delete(int id)
         {
             var deleteProduto = produtoService.DeleteProduto(id);
             if (deleteProduto == true)
             {
-                return Ok();
+                return Content(HttpStatusCode.OK, "Successful");
             }
-            return BadRequest();
+            return Content(HttpStatusCode.BadRequest, "Bad input parameter");
+
         }
 
-   }
+    }
 }

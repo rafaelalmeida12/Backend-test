@@ -9,6 +9,7 @@ using System.Data.Entity;
 
 namespace BackEndTesteGrupoRovema.Service
 {
+    [RoutePrefix("api/Produto")]
     public class ProdutoService : IProdutoInterface
     {
         private Context context = new Context();
@@ -17,6 +18,8 @@ namespace BackEndTesteGrupoRovema.Service
         {
             return context.Produtos.ToList();
         }
+
+        [Route("")]
         public Produto GetProduto(int id)
         {
             return context.Produtos.Where(x => x.Id == id).FirstOrDefault();
@@ -51,11 +54,12 @@ namespace BackEndTesteGrupoRovema.Service
             }
         }
 
-        public bool UpdateProduto(int id, Produto p)
+        public bool UpdateProduto(int Prodid, Produto p)
         {
             try
             {
                 context.Entry(p).State = EntityState.Modified;
+                context.Entry(p.Categorias).State = EntityState.Modified;
                 context.SaveChanges();
                 return true;
             }
