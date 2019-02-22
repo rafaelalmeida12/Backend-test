@@ -59,7 +59,6 @@ namespace BackEndTesteGrupoRovema.Service
             try
             {
                 context.Entry(p).State = EntityState.Modified;
-                context.Entry(p.Categorias).State = EntityState.Modified;
                 context.SaveChanges();
                 return true;
             }

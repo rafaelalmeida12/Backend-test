@@ -21,6 +21,7 @@ namespace BackEndTesteGrupoRovema.Controllers
 
         }
 
+        [Route("{id:int}")]
         public IHttpActionResult Get(int id)
         {
             var getCategoria = categoriaService.GetById(id);
