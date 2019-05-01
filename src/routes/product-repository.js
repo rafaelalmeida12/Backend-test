@@ -12,3 +12,9 @@ exports.getById = (id) => {
     return Product
         .findById(id)
 }
+
+exports.post = (objProduct) => {
+    var product = new Product(objProduct);
+    return product
+        .save();
+}
