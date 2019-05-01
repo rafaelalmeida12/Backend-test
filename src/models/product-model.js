@@ -11,7 +11,11 @@ const schema = new Schema({
     preco: {
         type: Number,
         required: true
-    }
+    },
+    categorias: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Category'
+    }]
 });
 
 module.exports = mongoose.model('Product', schema);
