@@ -55,3 +55,19 @@ exports.put = (req, res, next) => {
             });
         });
 }
+
+exports.delete = (req, res, next) => {
+    repository
+        .delete(req.body.id)
+        .then(x => {
+            res.status(200).send({
+                message: 'Produto removido com sucesso!'
+            });
+        })
+        .catch(e => {
+            res.status(400).send({
+                message: 'Falha ao cadastrar o produto',
+                data: e
+            })
+        })
+}
