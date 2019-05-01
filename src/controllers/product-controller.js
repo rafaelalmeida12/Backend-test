@@ -23,3 +23,19 @@ exports.getById = (req, res, next) => {
             res.status(400).send(e);
         });
 }
+
+exports.post = (req, res, next) => {
+    repository
+        .post(req.body)
+        .then(x => {
+            res.status(201).send({
+                message: 'Produto cadastrado com sucesso!'
+            });
+        })
+        .catch(e => {
+            res.status(400).send({
+                message: 'Falha ao cadastrar o produto',
+                data: e
+            });
+        });
+};
