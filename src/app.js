@@ -9,9 +9,11 @@ const app = express();
 mongoose.connect('mongodb+srv://thiago:0123654@nodestr-gau4c.azure.mongodb.net/backend-test?retryWrites=true');
 
 const ProductModel = require('./models/product-model');
+const CategoryModel = require('./models/category-model');
 
 const indexRoute = require('./routes/index-route');
 const productRoute = require('./routes/product-route');
+const categoryRoute = require('./routes/category-route');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -20,5 +22,6 @@ app.use(bodyParser.urlencoded({
 
 app.use('/', indexRoute);
 app.use('/products', productRoute);
+app.use('/categories', categoryRoute);
 
 module.exports = app;
