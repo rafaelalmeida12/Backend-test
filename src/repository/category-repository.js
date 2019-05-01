@@ -6,3 +6,8 @@ exports.get = (req, res, next) => {
     return Category
         .find({}, 'nome');
 }
+
+exports.getById = (id) => {
+    return Category
+        .findById(id);
+}
