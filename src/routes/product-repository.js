@@ -28,3 +28,8 @@ exports.put = (id, objProduct) => {
             }
         })
 }
+
+exports.delete = (id) => {
+    return Product
+        .findOneAndRemove(id);
+}
