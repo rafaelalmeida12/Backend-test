@@ -17,3 +17,13 @@ exports.post = (objCategory) => {
     return category
         .save();
 }
+
+exports.put = (id, objCategory) => {
+    return Category
+        .findByIdAndUpdate(id, {
+            $set: {
+                nome: objCategory.nome,
+                preco: objCategory.preco
+            }
+        })
+}
