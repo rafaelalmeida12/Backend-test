@@ -39,3 +39,19 @@ exports.post = (req, res, next) => {
             });
         });
 };
+
+exports.put = (req, res, next) => {
+    repository
+        .put(req.params.id, req.body)
+        .then(x => {
+            res.status(200).send({
+                message: 'Categoria atualizado com sucesso!'
+            });
+        })
+        .catch(e => {
+            res.status(400).send({
+                message: 'Falha ao atualizar a categoria',
+                data: e
+            });
+        });
+}
