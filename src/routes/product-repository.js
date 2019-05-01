@@ -18,3 +18,13 @@ exports.post = (objProduct) => {
     return product
         .save();
 }
+
+exports.put = (id, objProduct) => {
+    return Product
+        .findByIdAndUpdate(id, {
+            $set: {
+                nome: objProduct.nome,
+                preco: objProduct.preco
+            }
+        })
+}
