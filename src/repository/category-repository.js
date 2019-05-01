@@ -11,3 +11,9 @@ exports.getById = (id) => {
     return Category
         .findById(id);
 }
+
+exports.post = (objCategory) => {
+    var category = new Category(objCategory);
+    return category
+        .save();
+}
