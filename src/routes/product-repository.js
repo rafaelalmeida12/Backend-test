@@ -7,3 +7,8 @@ exports.get = (req, res, next) => {
     return Product
         .find({}, 'nome preco')
 }
+
+exports.getById = (id) => {
+    return Product
+        .findById(id)
+}
