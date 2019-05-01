@@ -13,6 +13,7 @@ const CategoryModel = require('./models/category-model');
 
 const indexRoute = require('./routes/index-route');
 const productRoute = require('./routes/product-route');
+const categoryRoute = require('./routes/category-route');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -21,5 +22,6 @@ app.use(bodyParser.urlencoded({
 
 app.use('/', indexRoute);
 app.use('/products', productRoute);
+app.use('/categories', categoryRoute);
 
 module.exports = app;
