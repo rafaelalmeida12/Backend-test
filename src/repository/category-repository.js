@@ -27,3 +27,8 @@ exports.put = (id, objCategory) => {
             }
         })
 }
+
+exports.delete = (id) => {
+    return Category
+        .findOneAndRemove(id);
+}
