@@ -1,0 +1,20 @@
+{
+  "name": "Backend-test",
+  "version": "1.0.0",
+  "description": "Somos uma empresa que atua em vários segmentos de mercado, com diferentes tecnologias, culturas e desafios. Por isso, gostamos de compor nossos times com profissionais multidisciplinares, que tenham alta capacidade de aprendizado, sejam detalhistas, resiliêntes, questionadores e curiosos. Você, como **Backend Developer**, será o responsável por implementar, dar manutenção, aplicar correções e propor soluções em arquiteturas **RESTFul API**, baseadas em **Containers Docker** sempre buscando a melhor composição de tecnologias para cada cenário.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barbosathiago/Backend-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Barbosathiago/Backend-test/issues"
+  },
+  "homepage": "https://github.com/Barbosathiago/Backend-test#readme"
+}
