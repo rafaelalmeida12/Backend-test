@@ -8,6 +8,8 @@ const app = express();
 
 mongoose.connect('mongodb+srv://thiago:0123654@nodestr-gau4c.azure.mongodb.net/backend-test?retryWrites=true');
 
+const ProductModel = require('./models/product-model');
+
 const indexRoute = require('./routes/index-route');
 
 app.use(bodyParser.json());
