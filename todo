@@ -1,0 +1,3 @@
+remover o body dos requests de GET para evitar erros
+corrigir o merge conflitante com thiago branch
+implementar codigo 404 na busca por ids
