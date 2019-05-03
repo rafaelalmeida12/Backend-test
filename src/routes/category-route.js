@@ -7,7 +7,7 @@ const controller = require('../controllers/category-controller');
 router.get('/', controller.get);
 router.get('/id/:id', controller.getById);
 router.post('/', controller.post);
-router.put('/:id', controller.put);
+router.put('/id/:id', controller.put);
 router.delete('/', controller.delete);
 
 module.exports = router;
