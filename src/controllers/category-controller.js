@@ -17,7 +17,14 @@ exports.getById = (req, res, next) => {
     repository
         .getById(req.params.id)
         .then(data => {
-            res.status(200).send(data);
+            if (data == null) {
+                res.status(404).send({
+                    "message": "Categoria não encontrada!"
+                })
+            }
+            else {
+                res.status(200).send(data);            
+            }
         })
         .catch(e => {
             res.status(400).send(e);
@@ -45,7 +52,7 @@ exports.put = (req, res, next) => {
         .put(req.params.id, req.body)
         .then(x => {
             res.status(200).send({
-                message: 'Categoria atualizado com sucesso!'
+                message: 'Categoria atualizada com sucesso!'
             });
         })
         .catch(e => {
