@@ -17,7 +17,14 @@ exports.getById = (req, res, next) => {
     repository
         .getById(req.params.id)
         .then(data => {
-            res.status(200).send(data);
+            if (data == null) {
+                res.status(404).send({
+                    "message": "Produto não encontrado!"
+                })
+            }
+            else {
+                res.status(200).send(data);            
+            }
         })
         .catch(e => {
             res.status(400).send(e);
