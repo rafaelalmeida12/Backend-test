@@ -101,7 +101,7 @@ exports.put = (req, res, next) => {
 
 exports.delete = (req, res, next) => {
     repository
-        .delete(req.body._id)
+        .delete(req.params.id)
         .then(data => {
             console.log(data);
             if (data!= null) {
