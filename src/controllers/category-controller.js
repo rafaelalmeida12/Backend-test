@@ -58,10 +58,18 @@ exports.post = (req, res, next) => {
 exports.put = (req, res, next) => {
     repository
         .put(req.params.id, req.body)
-        .then(x => {
-            res.status(200).send({
-                message: 'Categoria atualizada com sucesso!'
-            });
+        .then(data => {
+            if (data != null) {
+                res.status(200).send({
+                    message: 'Categoria atualizada com sucesso!',
+                    categoria: data
+                });
+            }
+            else {
+                res.status(404).send({
+                    message: 'Categoria não encontrada!',                    
+                });
+            }
         })
         .catch(e => {
             res.status(400).send({
