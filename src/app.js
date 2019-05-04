@@ -11,13 +11,13 @@ const app = express();
 //   .then(() => console.log('MongoDB Connected'))
 //   .catch(err => console.log(err));
 
-  mongoose
-  .connect(
-    'mongodb://mongo:27017/backend-test',
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+mongoose
+.connect(
+  'mongodb://mongo:27017/backend-test',
+  { useNewUrlParser: true }
+)
+.then(() => console.log('MongoDB Connected'))
+.catch(err => console.log(err));
 
 const ProductModel = require('./models/product-model');
 const CategoryModel = require('./models/category-model');
