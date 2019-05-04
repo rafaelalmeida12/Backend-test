@@ -24,6 +24,9 @@ exports.getByCategory = (id) => {
 exports.post = (objProduct) => {    
     var product = new Product(objProduct);
     product.categorias = _.uniqWith(objProduct.categorias, _.isEqual);
+    if (product.categorias.length <= 0) {
+        product.categorias = null;
+    }
     return product
         .save();
 }
@@ -36,10 +39,10 @@ exports.put = (id, objProduct) => {
                 preco: objProduct.preco,
                 categorias: _.uniqWith(objProduct.categorias, _.isEqual)
             }
-        })
+        }).setOptions({new: true})
 }
 
 exports.delete = (id) => {
     return Product
-        .findOneAndRemove(id);
+        .findByIdAndDelete(id);
 }
