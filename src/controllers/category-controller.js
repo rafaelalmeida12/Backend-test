@@ -34,10 +34,18 @@ exports.getById = (req, res, next) => {
 exports.post = (req, res, next) => {
     repository
         .post(req.body)
-        .then(x => {
-            res.status(201).send({
-                message: 'Categoria cadastrado com sucesso!'
-            });
+        .then(data => {
+            if (data != null) {
+                res.status(201).send({
+                    message: 'Categoria cadastrada com sucesso!',
+                    categoria: data
+                });
+            }
+            else {
+                res.status(400).send({
+                    message: 'Falha ao cadastrar a categoria'                    
+                });
+            }
         })
         .catch(e => {
             res.status(400).send({
