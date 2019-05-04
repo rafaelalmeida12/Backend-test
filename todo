@@ -1,3 +1,42 @@
-remover o body dos requests de GET para evitar erros
-corrigir o merge conflitante com thiago branch
-implementar codigo 404 na busca por ids
+- configurar o node @done
+- criar e configurar app.js @done
+- criar e configurar server.js @done
+
+- criar index @done
+    - criar controller @done
+    - criar rotas @done
+    - adicionar rotas no app.js @done
+
+- configurar mongoose @done
+    - adicionar mongoose no app @done
+
+- criar produtos
+    - criar model @done
+    - adicionar model no app @done
+    - criar repository
+        - criar get all @done
+        - criar get by id @done
+        - criar post @done
+        - criar put @done
+        - criar delete @done
+    - criar controller @done
+    - criar rotas @done
+    - adicionar rotas no app @done
+
+- criar categorias @done
+    - criar model @done
+    - adicionar model no app @done
+    - criar repository @done
+        - criar get all @done
+        - criar get by id @done
+        - criar post @done
+        - criar put @done
+        - criar delete @done
+    - criar controller @done
+    - criar rotas @done
+    - adicionar rotas no app @done
+
+- relacionar categorias com produtos @done
+    - adicionar busca de produtos por categorias @done
+- fazer validacao do cadastro de produtos @done
+    - lidar com categorias repetidas @done
