@@ -25,7 +25,7 @@ exports.put = (id, objCategory) => {
                 nome: objCategory.nome,
                 preco: objCategory.preco
             }
-        })
+        }).setOptions({new: true})
 }
 
 exports.delete = (id) => {
