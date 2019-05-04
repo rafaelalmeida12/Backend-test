@@ -25,10 +25,11 @@ exports.put = (id, objCategory) => {
                 nome: objCategory.nome,
                 preco: objCategory.preco
             }
-        })
+        }).setOptions({new: true})
 }
 
 exports.delete = (id) => {
+    console.log(id)
     return Category
-        .findOneAndRemove(id);
+        .findByIdAndDelete(id);
 }

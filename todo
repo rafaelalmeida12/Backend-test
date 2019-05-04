@@ -40,3 +40,5 @@
     - adicionar busca de produtos por categorias @done
 - fazer validacao do cadastro de produtos @done
     - lidar com categorias repetidas @done
+- implementar mensagem de erro ao nao encontrar produto para deletar/dar update @done
+- fazer o campo categorias required no produto @done
