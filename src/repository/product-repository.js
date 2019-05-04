@@ -36,7 +36,7 @@ exports.put = (id, objProduct) => {
                 preco: objProduct.preco,
                 categorias: _.uniqWith(objProduct.categorias, _.isEqual)
             }
-        })
+        }).setOptions({new: true})
 }
 
 exports.delete = (id) => {
