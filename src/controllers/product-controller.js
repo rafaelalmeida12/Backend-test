@@ -54,10 +54,18 @@ exports.getByCategory = (req, res, next) => {
 exports.post = (req, res, next) => {
     repository
         .post(req.body)
-        .then(x => {
-            res.status(201).send({
-                message: 'Produto cadastrado com sucesso!'
-            });
+        .then(data => {
+            if (data!= null) {
+                res.status(201).send({
+                    "message": "Produto criado com sucesso!",
+                    "Produto": data
+                })
+            }
+            else {
+                res.status(400).send({
+                    "message": "Ocorreu um erro ao atualizar o produto!"
+                })
+            }
         })
         .catch(e => {
             res.status(400).send({
