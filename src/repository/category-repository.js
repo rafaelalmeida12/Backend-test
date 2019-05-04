@@ -29,6 +29,7 @@ exports.put = (id, objCategory) => {
 }
 
 exports.delete = (id) => {
+    console.log(id)
     return Category
-        .findOneAndRemove(id);
+        .findByIdAndDelete(id);
 }
