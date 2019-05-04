@@ -6,6 +6,7 @@ exports.get = (req, res, next) => {
     repository
     .get()
     .then(data => {
+        console.log(data)
         res.status(200).send(data);
     })
     .catch(e => {
@@ -35,9 +36,10 @@ exports.getByCategory = (req, res, next) => {
     repository
         .getByCategory(req.params.id)
         .then(data => {
-            if (data == null) {
+            console.log(data);
+            if (data.length <= 0) {
                 res.status(404).send({
-                    "message": "Produto não encontrado!"
+                    "message": "Nenhum produto encontrado!"
                 })
             }
             else {
