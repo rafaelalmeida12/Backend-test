@@ -109,7 +109,7 @@ exports.delete = (req, res, next) => {
         })
         .catch(e => {
             res.status(400).send({
-                message: 'Falha ao cadastrar o produto',
+                message: 'Falha ao remover o produto',
                 data: e
             })
         })
