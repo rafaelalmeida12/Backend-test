@@ -21,3 +21,7 @@ Após [instalar o docker](https://docs.docker.com/install/) e [instalar o docker
 
     docker-compose up
 
+## Apiary
+Caso prefira, acesse [este link](https://backendtest2.docs.apiary.io) para:
+ - Entender como funcionam as rotas da aplicação
+ - Testar a aplicação (manualmente, não confundir com testes unitários)
