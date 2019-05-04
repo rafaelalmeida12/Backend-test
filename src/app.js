@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 mongoose
-  .connect(
+  .connect('mongodb+srv://thiago:0123654@nodestr-gau4c.azure.mongodb.net/backend-test?retryWrites=true')
     'mongodb://mongo:27017/backend-test',
     { useNewUrlParser: true }
   )
