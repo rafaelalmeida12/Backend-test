@@ -78,10 +78,18 @@ exports.post = (req, res, next) => {
 exports.put = (req, res, next) => {
     repository
         .put(req.params.id, req.body)
-        .then(x => {
-            res.status(200).send({
-                message: 'Produto atualizado com sucesso!'
-            });
+        .then(data => {
+            if (data!= null) {
+                res.status(200).send({
+                    "message": "Produto atualizado com sucesso!",
+                    "Produto": data
+                })
+            }
+            else {
+                res.status(400).send({
+                    "message": "Ocorreu um erro ao atualizar o produto!"
+                })
+            }
         })
         .catch(e => {
             res.status(400).send({
