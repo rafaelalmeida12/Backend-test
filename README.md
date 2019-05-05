@@ -6,16 +6,27 @@ Desenvolvi o projeto me baseando em um curso gratuito do site balta.io tendo em 
 
 # Tecnologias
 
-[JavaScript](https://www.javascript.com/) - Linguagem de programação interpretada utilizada no desenvolvimento do aplicativo
-[NodeJS](https://nodejs.org/en/) - Interpretador de javascript utilizado para rodar a aplicacao
-[Express](https://expressjs.com/) - Framework utilizado para criar aplicações web utilizando JavaScript
-[MongoDB](https://www.mongodb.com/) - Banco de dados NoSQL utilizado para  persistir os dados processados pela API
-[Docker](https://www.docker.com/) - Utilizado para encapsular a aplicação em containers facilitando sua portabilidade/instalação
-[Docker Compose](https://docs.docker.com/compose/) - Utilizado para facilitar ainda mais a instalação do aplicativo configurando um ambiente com a aplicação e o banco de dados devidamente configurados
-[VisualStudio Code](https://code.visualstudio.com/) - Editor de texto utilizado para codificar a aplicação
-[ERDPlus](https://erdplus.com/#/) - Aplicativo utilizado para criação do diagrama de entidade-relacionamento
-[GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) - Padrão de branches utilizado para administrar projetos de maneira clara no git.
-[Apiary](https://apiary.io/) - Ferramenta para design de API's.
+ - [JavaScript](https://www.javascript.com/) - Linguagem de programação
+    interpretada utilizada no desenvolvimento do aplicativo
+ - [NodeJS](https://nodejs.org/en/) - Interpretador de javascript
+    utilizado para rodar a aplicacao
+ - [Express](https://expressjs.com/) - Framework utilizado para criar
+   aplicações web utilizando JavaScript
+ - [MongoDB](https://www.mongodb.com/) - Banco de dados NoSQL utilizado
+   para  persistir os dados processados pela API
+ - [Docker](https://www.docker.com/) - Utilizado para encapsular a
+   aplicação em containers facilitando sua portabilidade/instalação
+ - [Docker Compose](https://docs.docker.com/compose/) - Utilizado para
+   facilitar ainda mais a instalação do aplicativo configurando um
+   ambiente com a aplicação e o banco de dados devidamente configurados
+ - [VisualStudio Code](https://code.visualstudio.com/) - Editor de texto
+   utilizado para codificar a aplicação
+ - [ERDPlus](https://erdplus.com/#/) - Aplicativo utilizado para criação
+   do diagrama de entidade-relacionamento
+ - [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+ - Padrão de branches utilizado para administrar projetos de maneira clara no git.
+ - [Apiary](https://apiary.io/) - Ferramenta para design de API's.
+
 ## Como rodar
 Após [instalar o docker](https://docs.docker.com/install/) e [instalar o docker-compose](https://docs.docker.com/compose/install/) basta abrir um terminal na raiz da aplicação e executar o seguinte comando:
 
