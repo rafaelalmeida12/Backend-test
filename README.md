@@ -26,8 +26,8 @@ A api está hospedada na plataforma heroku: http://apirafaelalmeida.herokuapp.co
 ### Opção 02:
 A api esta hospeda em um servidor Azure: https://apirafaelalmeida.azurewebsites.net/
 
-### Opção 03:
-O Projeto está hospedado no git hub :
+### Opção 03: 
+O Projeto está hospedado no git hub :https://github.com/rafaelalmeida12/Backend-test/tree/Rafael-Almeida
 - Baixar o projeto; 
 - Executar no vscode;
 
